@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 
 const port = process.env.PORT || 3100;
-const yourApiUrl = process.env.YOUR_API || "http://localhost:3200";
+const yourApiUrl = process.env.YOUR_API || "http://localhost:3300";
 
 app.post("/transaction", (_, res) => {
   const body = { id: randomUUID() };
