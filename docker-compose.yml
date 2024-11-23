@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  thirdparty:
+    build: ./thirdpartymock
+    ports:
+      - "3000:3000"
+
+  client:
+    build: ./client
+    environment:
+      YOUR_API: "http://localhost:3200" # replace with your new API
+    ports:
+      - "3100:3100"
+
+  transaction:
+    build: ./transaction-service
+    ports:
+      - "3200:3200"
