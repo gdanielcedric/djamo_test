@@ -15,4 +15,4 @@ services:
   transaction:
     build: ./transaction-service
     ports:
-      - "3200:3200"
+      - "3300:3300"
