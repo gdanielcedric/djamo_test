@@ -1,8 +1,0 @@
-version: "3.8"
-services:
-  transaction-service:
-    build: .
-    ports:
-      - "3300:3300"
-    env_file:
-      - .env
