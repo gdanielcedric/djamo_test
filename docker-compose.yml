@@ -8,11 +8,13 @@ services:
   client:
     build: ./client
     environment:
-      YOUR_API: "http://localhost:3300" # replace with your new API
+      YOUR_API: "http://transaction-service:3300" # replace with your new API
     ports:
       - "3100:3100"
 
-  transaction:
+  transaction-service:
     build: ./transaction-service
     ports:
       - "3300:3300"
+    env_file:
+      - ./transaction-service/.env

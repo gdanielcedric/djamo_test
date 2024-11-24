@@ -39,4 +39,5 @@ Will update the transaction's status. It expects the following body:
 {
     "id": "<your UUID>",
     "status": "<accepted|declined>"
+}
 ```
