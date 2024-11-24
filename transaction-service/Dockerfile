@@ -4,4 +4,7 @@ COPY package*.json ./
 COPY .env ./
 RUN npm install
 COPY . .
-CMD ["npm", "run", "start:prod"]
+RUN npm run build
+CMD npm start
+#CMD ["node", "dist/main"]
+#CMD ["npm", "run", "start:prod"]
